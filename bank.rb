@@ -19,9 +19,7 @@ class Bank
   def withdraw_funds amount
     ret = "success"
     if amount > 0
-      if amount != self.balance
-        self.balance -= amount
-      end
+      amount < self.balance ? self.balance -=amount : ret="failure"
     end
     ret
   end

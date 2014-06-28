@@ -29,6 +29,14 @@ class BankTest < Minitest::Test
     assert_equal "success", result
   end
 
+  def test_withdraw_entire_balance
+    result = @bank.withdraw_funds 100
+    assert_equal "failure", result
+  end
 
+  def test_withdraw_more_than_balance
+    result = @bank.withdraw_funds 200
+    assert_equal "failure", result
+  end
 
 end
