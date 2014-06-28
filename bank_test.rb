@@ -44,4 +44,9 @@ class BankTest < Minitest::Test
     assert_equal "success", result
   end
 
-  
+  def test_get_balance
+    @bank.add_funds 200
+    assert_equal 300, @bank.balance
+  end
+
+end
