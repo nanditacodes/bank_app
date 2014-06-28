@@ -6,4 +6,13 @@ class Bank
     @balance = balance
   end
 
+  def add_funds amount
+    ret = "success"
+    if amount <= 0
+      ret = "failure"
+    else
+      self.balance += amount
+    end
+    ret
+  end
 end
