@@ -5,4 +5,5 @@ class Bank
     @customer_name = customer_name
     @balance = balance
   end
+
 end
