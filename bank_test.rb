@@ -7,7 +7,7 @@ require 'minitest/sound'
 class BankTest < Minitest::Test
 
   def setup
-    @bank = Bank.new(1, "Joe", 100)
+    @bank = Bank.new("Joe", 100)
   end
 
   def test_get_initial_balance
@@ -47,6 +47,10 @@ class BankTest < Minitest::Test
   def test_get_balance
     @bank.add_funds 200
     assert_equal 300, @bank.balance
+  end
+
+  def test_get_customer_name
+    assert_equal "Joe", @bank.customer_name
   end
 
 end
