@@ -6,5 +6,3 @@ class Bank
     @balance = balance
   end
 end
-
-@bank = []
