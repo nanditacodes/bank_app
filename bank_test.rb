@@ -24,4 +24,11 @@ class BankTest < Minitest::Test
     assert_equal "failure", result
   end
 
+  def test_withdraw_valid_funds
+    result = @bank.withdraw_funds 50
+    assert_equal "success", result
+  end
+
+
+
 end

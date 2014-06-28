@@ -15,4 +15,15 @@ class Bank
     end
     ret
   end
+
+  def withdraw_funds amount
+    ret = "success"
+    if amount > 0
+      if amount != self.balance
+        self.balance -= amount
+      end
+    end
+    ret
+  end
+
 end
