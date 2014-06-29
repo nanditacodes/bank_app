@@ -1,7 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require './Bank'
-require 'minitest/sound'
 
 
 class BankTest < Minitest::Test
